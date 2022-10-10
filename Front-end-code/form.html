@@ -1,0 +1,621 @@
+
+
+     <style>
+        .left-main-wrapper {
+             float: left;
+             width: calc(47% - 15px);
+             margin: 40px 0;
+             padding-right: 15px;
+         }
+         .right-main-wrapper {
+             float: left;
+             width: calc(53% - 20px);
+             font-family: 'Open Sans';
+             margin: 40px 0;
+             padding-left: 20px;
+         }
+         .left-main-wrapper img {
+             max-width: 100%;
+             margin-bottom: 20px;
+         }
+ 
+         h2.head {
+             text-align: left;
+             font-family: 'Open Sans';
+             font-size: 38px;
+             letter-spacing: 0px;
+             color: #333333;
+             text-transform: capitalize;
+             margin-bottom: 20px;
+             line-height: 50px;
+             padding-right: 45px;
+             position: relative;
+             top: -10px;
+         }
+         textarea{
+             margin-top: 15px;
+         }
+ 
+         h4.head2 {
+             text-align: left;
+             letter-spacing: 0px;
+             font-size: 18px;
+             font-weight: 700;
+                 margin: 0;
+             margin-bottom: 10px;
+             padding: 0;
+             color: #333;
+           text-transform: unset;
+           border-bottom: none;
+         }
+         h4.head2 span{
+             font-weight: 400;
+           font-size: 17px;
+         }
+         .mandatory{
+             color: #DB0F0F;
+             font-size: 18px;
+             font-weight: 700 !important;
+         }
+         .jewelry_type {
+             text-align: left;
+             font: normal normal normal 16px/14px Open Sans;
+             letter-spacing: 0px;
+             color: #333333;
+         }
+ 
+         #message {
+             background: #FFFFFF;
+             border: 1px solid #D5D5D5;
+         }
+ 
+         #myfile {
+             background: #E5E5E5;
+             border: 1px solid #4F4F4F;
+             border-radius: 5px;
+         }
+ 
+         #sub {
+             background: #DD390D;
+             border-radius: 5px;
+         }
+ 
+         button {
+             background: #0069ff;
+             border-radius: 5px;
+         }
+ 
+         button a {
+             text-decoration: none;
+             font-size: 15px;
+             color: white;
+ 
+         }
+ 
+         .j_types_error {
+             display: none;
+         }
+ 
+         .describe_error {
+             display: none;
+         }
+ 
+         .file_error {
+             display: none !important;
+         }
+        
+        .file_format_error {
+             display: none;
+         }
+ 
+         .j_category_error {
+             display: none;
+         }
+ 
+         .g_category_error {
+             display: none;
+         }
+ 
+         .price_error {
+             display: none;
+         }
+ 
+         .success_result {
+             display: none;
+           margin-bottom: 20px;
+         }
+ 
+         .calendly-badge-content{
+             display: none !important; 
+         }
+       .calendly-popup-close{
+           display: block !important;
+       }
+        #contactForm label{
+             font-size: 16px;
+             letter-spacing: 0;
+             padding-left: 25px;
+             position: relative;
+             cursor: pointer;
+             color: #333;
+             margin-bottom: 5px;
+          font-weight: 400;
+         }
+         #contactForm input[type=checkbox] {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+ }
+ 
+ .checkmark {
+   position: absolute;
+   top: 3px;
+   left: 0;
+   height: 15px;
+     width: 15px;
+     background-color: #fff;
+     border: 1px solid #DD390D;
+ }
+ 
+ 
+ #contactForm input[type=checkbox]:checked ~ .checkmark {
+   background-color: #fff;
+ }
+ 
+ .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
+ 
+ #contactForm input[type=checkbox]:checked ~ .checkmark:after {
+   display: block;
+ }
+ 
+ #contactForm .checkmark:after {
+     left: 4px;
+     top: 0px;
+     width: 5px;
+     height: 9px;
+     border: solid #DD390D;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+ }
+ .custom-submit{
+     background: #DD390D !important;
+     color: #fff !important;
+     text-transform: uppercase;
+     font-size: 24px;
+     letter-spacing: 0;
+     padding: 10px 70px;
+     font-weight: 700;
+     display: inline-block;
+     width: unset;
+ }
+        .form-group{
+          margin-bottom: 20px;
+        }
+        #contactForm input[type=radio]{
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+ }
+ 
+ /* Create a custom radio button */
+ .checkmark2 {
+   position: absolute;
+   top: 3px;
+   left: 0;
+   height: 15px;
+   width: 15px;
+   background-color: #fff;
+     border: 1px solid #DD390D;
+   border-radius: 50%;
+ }
+ 
+ 
+ #contactForm input[type=radio]:checked ~ .checkmark2 {
+   background-color: #fff;
+ }
+ 
+ .checkmark2:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
+ 
+ #contactForm input[type=radio]:checked ~ .checkmark2:after {
+   display: block;
+ }
+ 
+ #contactForm .checkmark2:after {
+     top: 3px;
+     left: 3px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: #DD390D;
+ }
+        .statue-area{
+          display: flex;
+          margin-top: 40px;
+        }
+        .statue-area-in {
+     display: flex;
+ }
+        .statue-area-in img{
+          width: 50px;
+          height: 50px;
+        }
+        .statue-area-in h3{
+          font-size: 15px !important;
+          padding-left: 10px !important;
+        }
+        .ajax-loader {
+             display: none;
+ /*             position: absolute; */
+             z-index: +100 !important;
+             width: 100px;
+             height: 100px;
+         }
+ 
+         .ajax-loader img {
+           position: relative;
+           top: 20px;
+           left: 20px;
+         }
+        @media (max-width: 1199px){
+           .statue-area {
+             margin-top: 0;
+             flex-wrap: wrap;
+         }
+          .statue-area-in {
+             width: 100%;
+            align-items: center;
+             margin-bottom: 20px;
+         }
+          .statue-area-in h3 {
+           font-size: 17px !important;
+          }
+        }
+        @media (max-width: 767px){
+          .left-main-wrapper {
+             width: 100%;
+            margin: 0;
+         }
+         .right-main-wrapper {
+             width: 100%;
+           padding-left: 0;
+           margin: 0;
+           margin-top: 20px;
+         }
+          h2.head {
+             font-size: 36px;
+             margin-bottom: 10px;
+             line-height: 40px;
+             padding-right: 0;
+             top: 0px;
+         }
+          .custom-submit{
+            width: 100%;
+            margin-top: 20px;
+          }
+          
+          .ajax-loader{
+            width: 100%;
+            height: auto;
+          }
+          .ajax-loader img{
+            left: 40%;
+          }
+          .slick-slide img{
+            max-width: 100%;
+          }
+          ul.slick-dots {
+             justify-content: center;
+         }
+          .slick-dots li button:before{
+            font-size: 10px;
+          }
+          .form_slider{
+            display: block !important;
+          }
+          .left-main-wrapper{
+            display: none;
+          }
+        }
+         
+     </style>
+      <div class="form_slider" style="display: none;">
+        
+             <div class="image">
+                 <img src="https://cdn.shopify.com/s/files/1/0624/6799/7864/files/ezgif.com-gif-maker_1.png" />
+             </div>
+        
+             <div class="image">
+                 <img src="https://cdn.shopify.com/s/files/1/0624/6799/7864/files/ezgif.com-gif-maker_2.png" />
+             </div>
+        
+             <div class="image">
+                 <img src="https://cdn.shopify.com/s/files/1/0624/6799/7864/files/ezgif.com-gif-maker_1_6687a430-329d-4487-8cee-a3c8720776bc.png" />
+             </div>
+         
+     </div>
+     <div class="row">
+         <div class="left-main-wrapper">
+             <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/ezgif.com-gif-maker_1.png" alt="Girl in a jacket">
+             <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/ezgif.com-gif-maker_2.png" alt="Girl in a jacket">
+             <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/ezgif.com-gif-maker_1_-1.png" alt="Girl in a jacket">
+         </div>
+ 
+         <div class="right-main-wrapper">
+ 
+             <form method="POST" id="contactForm" enctype="multipart/form-data">
+ 
+                 <div class="form-group" id="j_type">
+                     <h3 id="success" class="success_result" style="color: green;">Thank you for contact us. we will contact you shortly.</h3>
+                     <h2 class="head">DESIGN YOUR PERFECT JEWELRY</h2>
+                     <h4 class="head2">What type of jewelry do you want to design?<span class="mandatory">*</span> <span>(can choose multiple)</span></h4>
+                     <span id="j_types_val" class="j_types_error" style="color: red;">Jewelry Type Field is Required </span>
+ 
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Pendant"> Pendant<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Necklace or Chain"> Necklace or Chain<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Crest Ring"> Crest Ring<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Wedding Band"> Wedding Band<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Engagement Ring"> Engagement Ring<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Bracelet"> Bracelet<span class="checkmark"></span></label>
+                     <label><input id="j_types" type="checkbox" name="jewelry_type[]" value="Cufflinks"> Cufflinks<span class="checkmark"></span></label>
+ 
+                 </div>
+ 
+                 <div class="form-group" id="j_describe">
+                     <h4 class="head2">Please describe your design in as much detail as possible:<span class="mandatory">*</span></h4>
+                     <span id="describe_val" class="describe_error" style="color: red;">Describe Field is Required</span>
+                     <textarea id="describe" name="describe" rows="3" class="form-control" style="resize: none;"></textarea>
+                 </div>
+ 
+                 <div class="form-group" id="j_file">
+                     <h4 class="head2">Upload your design, logo, or image for reference:<span class="mandatory">*</span></h4>
+                     <span id="file_val" class="file_error" style="color: red;display:block;">File is Required</span>
+                     <input class="file" type="file" name="file" placeholder="Choose file" id="file" />
+                     <span id="file_format" class="file_format_error" style="color: red;">Please upload file having extensions .jpeg/.jpg/.png only</span>
+                     <label for="file"></label>
+                 </div>
+ 
+                 <div class="form-group" id="j_category">
+                     <h4 class="head2">Choose the metal you want to use:<span class="mandatory">*</span> <span>(can choose multiple)</span></h4>
+                     <span id="j_category_val" class="j_category_error" style="color: red;">Jewelry Category Field is Required</span> 
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="22k gold"> 22k gold<span class="checkmark"></span></label>
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="18k gold"> 18k gold<span class="checkmark"></span></label>
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="14k gold"> 14k gold<span class="checkmark"></span></label>
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="10k gold"> 10k gold<span class="checkmark"></span></label>
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="Platinum"> Platinum<span class="checkmark"></span></label>
+                     <label><input class="j_category" type="checkbox" name="jewelry_category[]" value="Silver"> Silver<span class="checkmark"></span></label>
+                 </div>
+ 
+                 <div class="form-group" id="g_category">
+                     <h4 class="head2">Choose the gems you want to use:<span class="mandatory">*</span> <span>(can choose multiple)</span></h4>
+                     <span id="g_category_val" class="g_category_error" style="color: red;">Gems Category Field is Required </span>
+                     <label><input class="g_category" type="checkbox" name="gems_category[]" value="Natural diamonds"> Natural diamonds<span class="checkmark"></span></label>
+                     <label><input class="g_category" type="checkbox" name="gems_category[]" value="Lab Grown Diamonds"> Lab Grown Diamonds<span class="checkmark"></span></label>
+                     <label><input class="g_category" type="checkbox" name="gems_category[]" value="Colored Gemstones"> Colored Gemstones<span class="checkmark"></span></label>
+                 </div>
+ 
+                 <div class="form-group" id="j_price">
+                     <h4 class="head2">Estimated Ideal Budget (custom designs start at $5,000):<span class="mandatory">*</span></h4>
+                     <span id="price_val" class="price_error" style="color: red;">Jewelry price Field is Required</span>
+                     <label><input type="radio" name="price" value="$5,000 - $10,000"> $5,000 - $10,000<span class="checkmark2"></span></label>
+                     <label><input type="radio" name="price" value="$10,000 - $20,000"> $10,000 - $20,000<span class="checkmark2"></span></label>
+                     <label><input type="radio" name="price" value="$20,000 - $50,000"> $20,000 - $50,000<span class="checkmark2"></span></label>
+                     <label><input type="radio" name="price" value="$50,000"> $50,000<span class="checkmark2"></span></label>
+                 </div>
+ 
+                 <div class="form-group">
+                     <h4 class="head2">Note: <span>You will be able to provide additional details to the designer directly</span></h4>
+                     <button id="submit" class="btn custom-submit" style="background:#FF8800;" onclick="myFunction(event)">Submit</button>
+               <div class="ajax-loader">
+                     <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/Iphone-spinner-2.gif" class="img-responsive" />
+                 </div>
+                 </div>
+             </form>
+           <div class="statue-area">
+             <div class="statue-area-in statue-area-1">
+                 <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/authentic_3df2874b-5149-43c3-a406-610ab5539161_480x480.png?v=1654856345" alt="">
+                 <h3>100% Solid Gold and Silver</h3>
+             </div>
+             <div class="statue-area-in statue-area-2">
+                 <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/Group_3184_1520x.png?v=1655816101" alt="">
+                 <h3>Lifetime Warranty &amp; Maintenance</h3>
+             </div>
+             <div class="statue-area-in statue-area-3">
+                 <img src="https://cdn.shopify.com/s/files/1/0247/5725/files/Group_3186.png" alt="">
+                 <h3>Free Shipping</h3>
+             </div>
+         </div>
+            
+             <!-- Calendly badge widget begin -->
+             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+             <script type="text/javascript">
+                 window.onload = function() {
+                     Calendly.initBadgeWidget({
+                         url: 'https://calendly.com/proclamationjewelry',
+                     });
+                 }
+             </script>
+           
+             <script>
+                 function myFunction(e) {
+                     e.preventDefault();
+ 
+                     //jewelry_type
+                     var jewelryTypeValue = []
+                     var checkboxes = document.querySelectorAll('input[name="jewelry_type[]"]:checked')
+                     for (var i = 0; i < checkboxes.length; i++) {
+                         jewelryTypeValue.push(checkboxes[i].value)
+                     }
+ 
+                     if (jewelryTypeValue == '') {
+                         var j_type = document.getElementById("j_types_val");
+                         j_type.classList.remove("j_types_error");
+                     } else {
+                         var j_type = document.getElementById("j_types_val");
+                         j_type.classList.add("j_types_error");
+                     }
+ 
+                     //describe
+                     if (document.getElementById("describe").value == '') {
+                         var describe = document.getElementById("describe_val");
+                         describe.classList.remove("describe_error");
+ 
+                     } else {
+                         var describe = document.getElementById("describe_val");
+                         describe.classList.add("describe_error");
+ 
+                         var describeValue = document.getElementById("describe").value;
+                     }
+ 
+                     //file
+                     if (document.getElementById("file").files[0] == null) {
+                         var file = document.getElementById("file_val");
+                         file.classList.remove("file_error");
+                     } else {
+                         var fileInput = document.getElementById('file');
+                         var filePath = fileInput.value;
+                         var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+                         if (!allowedExtensions.exec(filePath)) {
+                             var file_format = document.getElementById("file_format");
+                             file_format.classList.remove("file_format_error");
+ 
+                             var file = document.getElementById("file_val");
+                             file.classList.add("file_error");
+ 
+                         } else {
+                             var file = document.getElementById("file_val");
+                             file.classList.add("file_error");
+                             var imageValue = document.getElementById("file").files[0];
+                         }
+                     }
+ 
+                     //jewelry_category
+                     var jewelryCategoryValue = []
+                     var checkboxes1 = document.querySelectorAll('input[name="jewelry_category[]"]:checked')
+                     for (var i = 0; i < checkboxes1.length; i++) {
+                         jewelryCategoryValue.push(checkboxes1[i].value)
+                     }
+ 
+                     if (jewelryCategoryValue == '') {
+                         var j_category = document.getElementById("j_category_val");
+                         j_category.classList.remove("j_category_error");
+                     } else {
+                         var j_category = document.getElementById("j_category_val");
+                         j_category.classList.add("j_category_error");
+                     }
+ 
+                     //gems_category
+                     var gemsCategoryValue = []
+                     var checkboxes2 = document.querySelectorAll('input[name="gems_category[]"]:checked')
+                     for (var i = 0; i < checkboxes2.length; i++) {
+                         gemsCategoryValue.push(checkboxes2[i].value)
+                     }
+ 
+                     if (gemsCategoryValue == '') {
+                         var g_category = document.getElementById("g_category_val");
+                         g_category.classList.remove("g_category_error");
+                     } else {
+                         var g_category = document.getElementById("g_category_val");
+                         g_category.classList.add("g_category_error");
+                     }
+ 
+                     //price
+                     if (document.querySelector('input[name="price"]:checked') == null) {
+ 
+                         var price = document.getElementById("price_val");
+                         price.classList.remove("price_error");
+                     } else {
+                         var price = document.getElementById("price_val");
+                         price.classList.add("price_error");
+ 
+                         var priceValue = document.querySelector('input[name="price"]:checked').value;
+                     }
+ 
+ 
+                     console.log(jewelryTypeValue);
+                     console.log(describeValue);
+                     console.log(imageValue);
+                     console.log(jewelryCategoryValue);
+                     console.log(gemsCategoryValue);
+                     console.log(priceValue);
+ 
+                     //formSubmit(jewelryTypeValue, describeValue, imageValue, jewelryCategoryValue, gemsCategoryValue, priceValue);
+ 
+ 
+                    if (jewelryTypeValue != '' && document.getElementById("describe").value != '' && document.getElementById("file").files[0] != null && jewelryCategoryValue != '' && gemsCategoryValue != '' && document.querySelector('input[name="price"]:checked') != null){
+ 
+                     var formData = new FormData($('#contactForm')[0]);
+ 
+                     formData.append('tax_file', $('input[type=file]')[0].files[0]);
+ 
+                     // $('#submit').html('Please Wait...');
+                     // $("#submit").attr("disabled", true);
+                     $.ajax({
+                         url: "https://proclamationjewelryshopify.enterpriseapplicationdevelopers.com/api/contact-us",
+                         type: "POST",
+                         beforeSend: function() {
+                             $('.ajax-loader').css("display", "inline-block");
+                         },
+                         data: formData,
+                         processData: false,
+                         contentType: false,
+                         success: function(response) {
+ 
+                             var success = document.getElementById("success");
+                             success.classList.remove("success_result");
+ 
+                             $('.calendly-badge-content').trigger('click');
+ 
+                             document.getElementById("contactForm").reset();
+                         },
+                       complete: function() {
+                             $('.ajax-loader').css("display", "none");
+ 
+                         }
+                         
+                     });
+               }
+ 
+                 }
+ 
+                 
+           
+                 // function myFunction(event) {
+                 //     formSubmit();
+                 //     $('.calendly-badge-content').trigger('click');
+                 //     event.preventDefault();
+                 //     let submit =document.getElementsByClassName('calendly-badge-content');
+                 //     submit.click();
+                 //     calendly-badge-content
+                 //     Calendly.initBadgeWidget({ url: 'https://calendly.com/shanmugam-p', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true });
+ 
+                 // }
+             </script>
+            <script>
+      $('.form_slider').slick({
+                     autoplay: true,
+                     infinite: true,
+                     dots: true,
+                     autoplaySpeed: 3000,
+                     speed: 300,
+                     slidesToShow: 1
+                     
+                 });
+    </script>
+         </div>
+     </div>
+ 
